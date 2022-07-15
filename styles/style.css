@@ -15,7 +15,6 @@
   max-height: 756px;
   background-color: #F2F2F2;
   display: flex;
-  overflow: hidden;
   position: relative;
   /* выше установили ограничения для секции */
 }
@@ -24,7 +23,7 @@
   line-height: 96px;
   font-size: 102px;
   max-width: 730px;
-  margin-left: 64px;
+  margin: 0 64px;
   position: relative;
   z-index: 1;
   font-weight: 700;
@@ -37,8 +36,9 @@
   font-size: 18px;
   font-weight: 400;
   max-width: 388px;
-  margin-left: 64px;
-  margin-bottom: 30px;
+  position: absolute;
+  left: 64px;
+  bottom: 30px;
   position: absolute;
   z-index: 1;
   align-self:flex-end;
@@ -60,8 +60,8 @@
 
 .logo_place_header {
   position: absolute;
-  margin-top: 30px;
-  margin-left: 64px;
+  top: 30px;
+  left: 64px;
   background-image: url(../images/logo_place_header.svg);
 }
 
@@ -70,12 +70,12 @@
   width: 568px;
   background-color: #2F80ED;
   position: absolute;
-  margin-top: 64px;
+  top: 64px;
   right: 0;
 }
 
 .header__main-illustration {
-  width: 756px;
+  width: 765px;
   height: 608px;
   background-image: url(../images/two_again.png);
   background-size: cover;
@@ -146,6 +146,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
+  padding: 0;
+  list-style: none;
 }
 
 .table__cell {
@@ -195,7 +197,7 @@
   font-weight: 400;
 }
 
-.feinman__link {
+.feynman__link {
   line-height: 51px;
   font-size: 36px;
   text-decoration: none;
@@ -213,7 +215,7 @@
   overflow: hidden;
 }
 
-.section-title_theme-dark {
+.section-title_theme_dark {
   color: #fff;
   position: relative;
   min-width: 60%;
@@ -223,7 +225,6 @@
   color: #fff;
   position: relative;
   min-width: 60%;
-  padding: 20px 0 0;
 }
 
 .table_theme_dark {
@@ -298,32 +299,23 @@
 .footer__column_content_copyright {
   flex-basis: 711px;
   position: relative;
-  display: block;
+  display: flex;
   flex-direction: column;
   align-items: baseline;
   justify-content: space-between;
 }
 
 .footer__author {
-  padding: 18px 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: 400;
   color: #fff;
-  position: absolute;
   left: 0;
   bottom: 0;
 }
 
-.footer__columns_info {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
 .footer__column_content_info {
   align-items: center;
-  margin: 0 0 0 50%;
 }
 
 .footer__column-heading {
@@ -336,6 +328,7 @@
 
 .footer__column-links {
   padding: 0 0 16px;
+  list-style: none;
 }
 
 .footer__column-link {
@@ -343,15 +336,12 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: 400;
+  color: #fff;
+  text-decoration: none;
 }
 
 .footer__social-icon {
   margin-right: 10px;
   width: 16px;
   height: 16px;
-}
-
-.footer__link {
-  color: #fff;
-  text-decoration: none;
 }
